@@ -12,6 +12,9 @@ Any other random scripts or information I decide to upload here in relation to t
 
 
 Some resources for downloading and running PRSice-2: 
+
 https://github.com/choishingwan/PRSice
+
 https://www.prsice.info
+
 Choi SW, and O’Reilly PF. "PRSice-2: Polygenic Risk Score Software for Biobank-Scale Data." GigaScience 8, no. 7 (July 1, 2019). https://doi.org/10.1093/gigascience/giz082.
