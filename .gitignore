@@ -1,6 +1,22 @@
 # Data files
 *.csv
 *.txt
+*.bim
+*.bed
+*.fam
+*.png
+*.best
+*.log
+*.mismatch
+*.prsice
+*.snp
+*.snp2
+*.snp3
+*.snpMarlin
+*.snpFetal
+*.summary
+*.valid
+*.best
 
 # History files
 .Rhistory
