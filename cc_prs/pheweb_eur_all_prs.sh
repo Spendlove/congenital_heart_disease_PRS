@@ -2,7 +2,7 @@
 #$ -S /bin/bash
 #$ -N pheweb_eur_all_prs
 #$ -cwd
-#$ -o /u/home/s/sarahjs3/project-arboleda/congenital_heart_disease_PRS/other/outfiles/cc_prs.$JOB_ID.out
+#$ -o /u/home/s/sarahjs3/project-arboleda/congenital_heart_disease_PRS/other/outfiles/pheweb_all_prs.$JOB_ID.out
 #$ -j y
 #$ -m a
 #$ -l h_data=8G,h_rt=4:00:00,highp
