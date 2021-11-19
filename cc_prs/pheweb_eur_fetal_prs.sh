@@ -4,8 +4,8 @@
 #$ -cwd
 #$ -o /u/home/s/sarahjs3/project-arboleda/congenital_heart_disease_PRS/other/outfiles/pheweb_fetal_prs.$JOB_ID.out
 #$ -j y
-#$ -m a
-#$ -l h_data=8G,h_rt=4:00:00,highp
+#$ -m ea
+#$ -l h_data=32G,h_rt=8:00:00,highp
 
 . /u/local/Modules/default/init/modules.sh 
 module load gcc/10.2.0
