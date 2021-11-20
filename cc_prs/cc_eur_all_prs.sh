@@ -4,7 +4,7 @@
 #$ -cwd
 #$ -o /u/home/s/sarahjs3/project-arboleda/congenital_heart_disease_PRS/other/outfiles/cc_prs.$JOB_ID.out
 #$ -j y
-#$ -m a
+#$ -m ea
 #$ -l h_data=8G,h_rt=4:00:00,highp
 
 . /u/local/Modules/default/init/modules.sh 
