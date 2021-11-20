@@ -117,7 +117,7 @@ for e in end_old:
 print(e)
 
 newfiles1=["fix.Lifted.common.heart_valve_disorders.txt","fix.Lifted.common.abnormal_heart_sounds.txt"]
-newfiles2=["fix2.Lifted.common.heart_valve_disorders.txt","fix2.Lifted.abnormal_heart_sounds.txt"]
+newfiles2=["fix2.Lifted.common.heart_valve_disorders.txt","fix2.Lifted.common.abnormal_heart_sounds.txt"]
 
 indexes=[0,1]
 for i in indexes:
