@@ -16,4 +16,7 @@ ls $chainfile
 $liftOver -bedPlus=3 noheader.common.abnormal_heart_sounds.txt $chainfile Lifted.common.abnormal_heart_sounds.txt Unlifted.common.abnormal_heart_sounds.txt
 $liftOver -bedPlus=3 noheader.common.heart_valve_disorders.txt $chainfile Lifted.common.heart_valve_disorders.txt Unlifted.common.heart_valve_disorders.txt
 
+sed -e '1i\chrom   chromStart      chromEnd        CHROM   POS     ID      REF     ALT     ac      af      num_cases       num_controls    beta    sebeta  Tstat   pval    pval_SAIGE_NoSPA        Is_Converged    varT    varTstar        snp' Lifted.common.abnormal_heart_sounds.txt > fix.Lifted.common.abnormal_heart_sounds.txt
 
+
+sed -e '1i\chrom   chromStart      chromEnd        CHROM   POS     ID      REF     ALT     ac      af      num_cases       num_controls    beta    sebeta  Tstat   pval    pval_SAIGE_NoSPA        Is_Converged    varT    varTstar        snp' Lifted.common.heart_valve_disorders.txt > fix.Lifted.common.heart_valve_disorders.txt
