@@ -37,7 +37,7 @@ for i in indexes:
         for line in myin.readlines():
             if first:
                 first=False
-                myout.write("CHR\tBP\tA1\tA2\tSNP\tP\tBETA\n")
+                myout.write("CHR BP A1 A2 SNP P BETA\n")
             else:
                 line2=line.strip().split()
 
@@ -76,7 +76,7 @@ for i in indexes:
                                 #print("prob2"+line+"_"+minor[i]+"_"+A1)
                             else:
                                 A1=a2
-                                A2=a2
+                                A2=a1
                         elif a2==minor[i] and a1==minor[i]:
                             print("prob3"+line+"_"+minor[i]+"_"+A1)
                         elif a2!=minor[i] and a1!=minor[i]:
@@ -84,7 +84,7 @@ for i in indexes:
                         else:
                             print("prob4??"+line)
                     if A1!="" and A2!="":
-                        outline=chr+"\t"+start+"\t"+A1+"\t"+A2+"\t"+snpid+"\t"+P+"\t"+Beta+"\n"
+                        outline=chr+" "+start+" "+A1+" "+A2+" "+snpid+" "+P+" "+Beta+"\n"
                         myout.write(outline)
                     #else:
                     #    print(minor+"____"+chr+"\t"+start+"\t"+A1+"\t"+A2+"\t"+snpid+"\t"+P+"\t"+Beta+"\n")
