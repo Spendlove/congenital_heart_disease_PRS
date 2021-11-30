@@ -53,6 +53,8 @@ for i in indexes:
                 a2b=snp[3]
                 a1=line2[7].strip()
                 a2=line2[8].strip()
+                #if a1==a2:
+                #    print("PROB!!!!!")
                 minor=minor_dict[snp2]
                 start_old.add("chr"+chr+":"+start)
                 end_old.add("chr"+chr+":"+end)
@@ -95,7 +97,7 @@ for i in indexes:
                         A2=a2
                     elif a2==minor[0] and a1!=minor[0]:
                         A1=a2
-                        A2=a2
+                        A2=a1
                     elif a2!=minor[0] and a1!=minor[0]:
                         print("prob5 none"+minor[0]+"_"+a1+"_"+a2+"_"+a1b+"_"+a2b)
                     else:

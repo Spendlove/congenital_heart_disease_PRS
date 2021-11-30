@@ -2,6 +2,8 @@
 import sys
 out1=open("noheader.common.heart_valve_disorders.txt","w")
 out2=open("noheader.common.abnormal_heart_sounds.txt","w")
+out3=open("noheader2.common.heart_valve_disorders.txt","w")
+out4=open("noheader2.common.abnormal_heart_sounds.txt","w")
 first=True
 firstline="chrom\tchromStart\tchromEnd\tCHROM\tPOS\tID\tREF\tALT\tac\taf\tnum_cases\tnum_controls\tbeta\tsebeta\tTstat\tpval\tpval_SAIGE_NoSPA\tIs_Converged\tvarT\tvarTstar\tsnp\n"
 with open("PheCode_395_SAIGE_MACge20.txt.vcf","r") as myin:
@@ -17,6 +19,8 @@ with open("PheCode_395_SAIGE_MACge20.txt.vcf","r") as myin:
             info="chr"+line2[0].strip()+"\t"+str(int(bp)-1)+"\t"+str(int(bp))+"\t"
             line3=info+line.strip()+"\t"+snp+"\n"
             if float(af)>=0.05:
+                if (1-float(af)) >=0.05:
+                    out3.write(line3)
                 out1.write(line3)
 first=True
 with open("PheCode_396_SAIGE_MACge20.txt.vcf","r") as myin:
@@ -33,3 +37,9 @@ with open("PheCode_396_SAIGE_MACge20.txt.vcf","r") as myin:
             line3=info+line.strip()+"\t"+snp+"\n"
             if float(af)>=0.05:
                 out2.write(line3)
+                if (1-float(af)) >=0.05:
+                    out4.write(line3)
+out1.close()
+out2.close()
+out3.close()
+out4.close()
