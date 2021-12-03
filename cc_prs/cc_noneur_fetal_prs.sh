@@ -11,6 +11,6 @@
 module load gcc/10.2.0
 module load R/4.1.0-DS
 
-Rscript PRSice/PRSice.R --dir . --prsice PRSice/bin/PRSice --base fix2.Lifted.common.heart_valve_problem_or_heart_murmur.txt --A1 A1 --A2 A2 --stat BETA --target noneur100 --thread 1 --beta --quantile 10 --pheno pheno.txt --pheno-col PHENO --nonfounders --print-snp --binary-target T --out noneur100_HEART_VALVE --bar-levels 0.00385005 --seed 5 --fastscore
+Rscript PRSice/PRSice.R --dir . --prsice PRSice/bin/PRSice --base fix.Lifted.common.heart_valve_problem_or_heart_murmur.txt --A1 A2 --A2 A1 --stat BETA --target noneur100 --thread 1 --beta --quantile 10 --pheno pheno.txt --pheno-col PHENO --nonfounders --print-snp --binary-target T --out noneur100_HEART_VALVE --bar-levels 0.00385005 --seed 5 --fastscore
 
-Rscript PRSice/PRSice.R --dir . --prsice PRSice/bin/PRSice --base fix2.Lifted.common.heart_valve_problem_or_heart_murmur.txt --A1 A1 --A2 A2 --stat BETA --target noneur100 --thread 1 --beta --quantile 10 --pheno pheno.txt --pheno-col PHENO --nonfounders --print-snp --binary-target T --out noneur100_HEART_VALVE --bar-levels 0.00385005 --seed 5 --fastscore --extract noneur100_HEART_VALVE.valid
+Rscript PRSice/PRSice.R --dir . --prsice PRSice/bin/PRSice --base fix.Lifted.common.heart_valve_problem_or_heart_murmur.txt --A1 A2 --A2 A1 --stat BETA --target noneur100 --thread 1 --beta --quantile 10 --pheno pheno.txt --pheno-col PHENO --nonfounders --print-snp --binary-target T --out noneur100_HEART_VALVE --bar-levels 0.00385005 --seed 5 --fastscore --extract noneur100_HEART_VALVE.valid
