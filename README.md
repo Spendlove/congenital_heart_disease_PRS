@@ -1,14 +1,14 @@
 # congenital_heart_disease_PRS
 
-This github repository contains key code from my congenital heart disease PRS project.  For additional code or questions please contact me at spendlove.sj at gmail.com
+**This github repository contains key code from my congenital heart disease PRS project.  For additional code or questions please contact me at spendlove.sj at gmail.com**
 
-Code for running PRSice-2 is in the prs and directories. You may have to replace some file locations with your own file structure
+Code for running PRSice-2 is in the **prs** directory. You may have to replace some file locations with your own file structure
 
-Software is copied to the folder of the same name, but you may have to reinstall them.
+**Software** is copied to the folder of the same name, but you may have to reinstall them.
 
-Code to generate pseudo-controls in plink is included in the pseudo_controls folder.
+Code to generate pseudo-controls in plink is included in the **pseudo_controls** folder.
 
-Any other random scripts or information I decide to upload here in relation to this project is in the other folder. Currently it contains a script indicating how I obtained the positions of the genes from the  fetal cardiac gene set. I started with 18421 gene names and ended with 14167 non sex chromosome and non MT genes whose positions were available in Gencode version 35 annotations.
+Any other random scripts or information I decide to upload here in relation to this project is in the **other** folder. Currently it contains a script indicating how I obtained the positions of the genes from the  fetal cardiac gene set. I started with 18421 gene names and ended with 14167 non sex chromosome and non MT genes whose positions were available in Gencode version 35 annotations.
 
 
 Some resources for downloading and running PRSice-2: 
