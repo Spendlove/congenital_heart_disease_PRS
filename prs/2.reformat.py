@@ -1,5 +1,6 @@
 infiles1=["20002_1078.gwas.imputed_v3.both_sexes.tsv","20002_1077.gwas.imputed_v3.both_sexes.tsv","R00.gwas.imputed_v3.both_sexes.tsv"]
 outfiles=["noheader.common.heart_valve.txt","noheader.common.heart_arr.txt","noheader.common.heart_beat.txt"]
+
 indexes=[0,1,2]
 
 for i in indexes:
@@ -26,9 +27,9 @@ for i in indexes:
     myout.close()
 
 
-infiles2=["PheCode_395_SAIGE_MACge20.txt.vcf","PheCode_396_SAIGE_MACge20.txt.vcf"]
-outfiles2=["noheader.common.valve_dis.txt","noheader.common.heart_sounds.txt"]
-indexes=[0,1]
+infiles2=["PheCode_395_SAIGE_MACge20.txt.vcf","PheCode_396_SAIGE_MACge20.txt.vcf","PheCode_395.6_SAIGE_MACge20.txt.vcf","PheCode_747_SAIGE_MACge20.txt.vcf"]
+outfiles2=["noheader.common.valve_dis.txt","noheader.common.heart_sounds.txt","noheader.common.valve_replaced.txt","noheader.common.congenital_abnormalities.txt"]
+indexes=[0,1,2,3]
 
 for i in indexes:
     first=True

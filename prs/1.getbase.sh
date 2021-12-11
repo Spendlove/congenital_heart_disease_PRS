@@ -14,6 +14,10 @@ gunzip PheCode_395_SAIGE_MACge20.txt.vcf.gz
 gunzip PheCode_396_SAIGE_MACge20.txt.vcf.gz
 
 
-
 wget ftp://share.sph.umich.edu/UKBB_SAIGE_HRC/PheCode_395_SAIGE_MACge20.txt.vcf.gz
 wget ftp://share.sph.umich.edu/UKBB_SAIGE_HRC/PheCode_396_SAIGE_MACge20.txt.vcf.gz
+
+#wget ftp://share.sph.umich.edu/UKBB_SAIGE_HRC/PheCode_747_SAIGE_MACge20.txt.vcf.gz 
+#wget ftp://share.sph.umich.edu/UKBB_SAIGE_HRC/PheCode_395.6_SAIGE_MACge20.txt.vcf.gz
+#gunzip PheCode_747_SAIGE_MACge20.txt.vcf.gz
+#gunzip PheCode_395.6_SAIGE_MACge20.txt.vcf.gz

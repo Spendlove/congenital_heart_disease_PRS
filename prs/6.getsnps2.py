@@ -17,12 +17,13 @@ for name in gwas:
                 snp=line2[4]
                 p=line2[5]
                 beta=line2[6]
+                af=line2[7]
                 mystring=""
                 if snp not in gwas_dict2[name]:
-                    mystring=mystring+alt+":"+p+":"+beta
+                    mystring=mystring+alt+":"+p+":"+beta+":"+af
                     gwas_dict2[name][snp]=mystring
                 else:
-                    mystring=gwas_dict2[name][snp]+"_"+alt+":"+p+":"+beta
+                    mystring=gwas_dict2[name][snp]+"_"+alt+":"+p+":"+beta+":"+af
                     gwas_dict2[name][snp]=mystring
 
 pval={}
@@ -70,8 +71,8 @@ with open("genes.all.file") as myin:
         else:
             line2=line.strip().split("\t")
             chr=line2[2]
-            start=float(line2[3])
-            end=float(line2[4])
+            start=float(line2[3])-10000
+            end=float(line2[4])+10000
             gene=line2[0]
             info=[gene,chr,start,end]
             allgenes.append(info)
@@ -118,7 +119,8 @@ print(len(mydict['17']))
 ##print(eurM)
 for prefix in allfiles:
     n=0
-    sum=0.0
+    n2=0
+    sum=0
     mypop=pop[prefix]
     infile=prefix+".snp"
     outfile=prefix+".snp3"
@@ -130,7 +132,7 @@ for prefix in allfiles:
         for line in myin.readlines():
             line2=line.strip().split()
             if first:
-                myout.write(line.strip()+"\tGenes\tAlt:P:Beta\n")
+                myout.write(line.strip()+"\tGenes\tAlt\tP\tBeta\tAF\tMinor\n")
                 first=False
             else:
                 chr=line2[0]
@@ -143,7 +145,7 @@ for prefix in allfiles:
                     for gene in mydict[chr]:
                             if bp > float(gene[1]) and bp < float(gene[2]):
                                 genename=genename+gene[0]+" "
-                    #if genename!="":
+                    #if genename!="-":
                     #    print(genename)
                     gname=gwas_dict[prefix]
                     stuff=""#("","")
@@ -151,9 +153,18 @@ for prefix in allfiles:
                         stuff=gwas_dict2[gname][snp]
                     stuff2=stuff.split(":")
                     beta=stuff2[2]
-                    n+=1
-                    sum+=float(beta)
-                    line3=line.strip()+"\t"+genename+"\t"+stuff+"\n"
+                    af=stuff2[3]
+                    m="Major"
+                    if float(af) < 0.5:
+                        m="Minor"
+                        n+=1
+                    if float(beta) < 0.0:
+                        n2+=1
+                    sum+=1
+                    mystr="\t".join(stuff2)
+                    if genename=="":
+                        genename="-"
+                    line3=line.strip()+"\t"+genename+"\t"+mystr+"\t"+m+"\n"
                     myout.write(line3)
                     #if mypop=="eur":
                     #    if snp in eurM:
@@ -165,7 +176,7 @@ for prefix in allfiles:
                     #        outfile2.write(line)
                     #    if snp in noneurF:
                     #        outfile3.write(line)
-    print(prefix+"\t"+str(sum/n))
+    print(prefix+"\t"+str(n)+" minor and "+str(n2)+"negative betas out of a total of "+str(sum)+"variants/n")
     myout.close()
 #    outfile2.close()
 #    outfile3.close()
