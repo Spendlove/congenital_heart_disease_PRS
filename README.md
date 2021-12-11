@@ -2,7 +2,7 @@
 
 This github repository contains key code from my congenital heart disease PRS project.  For additional code or questions please contact me at spendlove.sj at gmail.com
 
-Code for running PRSice-2 is in the cc_prs and sev_prs directories
+Code for running PRSice-2 is in the prs and directories. You may have to replace some file locations with your own file structure
 
 Software is copied to the folder of the same name, but you may have to reinstall them.
 
